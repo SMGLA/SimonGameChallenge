@@ -1,14 +1,14 @@
 var buttonColours = ["red", "blue", "green", "yellow"]; // Index: red-0, blue-1, green-2, yellow-3
 var gamePattern = []; // Storing generated sequence
 var userClickedPattern = []; // Storing clicked sequence by the user
-var started = false; // Checking if it's the beggining of the game
+var started = false; // Checking if it's the first round of the game
 var level = 0; // The game starts from level 0 and increases until it ends
 
 $(document).keypress(function() {
-  if (!started) {
-  $("#level-title").text("Level " + level);
-  nextSequence();
-  started = true;
+  if (!started) {  // If "not (!)" started - If the var "started" is NOT "false"
+  $("#level-title").text("Level " + level); // Shows the level
+  nextSequence(); // Call nextSequence
+  started = true; // Change var "started" to "true"
 }
 });
 
